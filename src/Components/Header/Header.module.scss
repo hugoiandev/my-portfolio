@@ -14,6 +14,101 @@
   }
 
   .menu {
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 15px;
+    }
+
+    button .menuMobileClosed {
+      height: 1px;
+      width: 40px;
+      background: none;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 1px;
+        width: 100%;
+        display: block;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: 0px;
+        transform: rotate(45deg);
+        animation: animeBeforeClosed 0.8s forwards;
+      }
+
+      &::after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        display: block;
+        background: var(--primary-color);
+        position: absolute;
+        top: 0px;
+        transform: rotate(-45deg);
+        animation: animeAfterClosed 0.8s forwards;
+      }
+
+      @keyframes animeBeforeClosed {
+        to {
+          transform: rotate(0deg);
+          bottom: 6px;
+        }
+      }
+
+      @keyframes animeAfterClosed {
+        to {
+          transform: rotate(0deg);
+          top: 6px;
+        }
+      }
+    }
+
+    button .menuMobileOpen {
+      height: 1px;
+      width: 40px;
+      background: none;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 1px;
+        width: 100%;
+        display: block;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: 6px;
+        animation: animeBeforeOpen 0.8s forwards;
+      }
+
+      &::after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        display: block;
+        background: var(--primary-color);
+        position: absolute;
+        top: 6px;
+        animation: animeAfterOpen 0.8s forwards;
+      }
+
+      @keyframes animeBeforeOpen {
+        to {
+          transform: rotate(45deg);
+          bottom: 0px;
+        }
+      }
+
+      @keyframes animeAfterOpen {
+        to {
+          transform: rotate(-45deg);
+          top: 0px;
+        }
+      }
+    }
+
     ul {
       display: flex;
       li {
