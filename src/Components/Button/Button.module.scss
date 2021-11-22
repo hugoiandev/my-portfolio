@@ -6,7 +6,8 @@
   a {
     overflow: hidden;
     button {
-      padding: 10px 60px;
+      height: 40px;
+      width: 150px;
       font-family: 'Inter', sans-serif;
       font-size: 1rem;
       border-radius: 5px;
@@ -16,6 +17,36 @@
       transform: translateY(100%);
       box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
       opacity: 0;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+
+      span {
+        transition: 0.2s;
+        position: absolute;
+        right: 0;
+        left: 0;
+      }
+
+      &::before {
+        content: 'Ir';
+        display: inline-block;
+        transition: 0.2s;
+        transform: translateX(-90px);
+        position: relative;
+        right: 0;
+        left: 0;
+      }
+
+      &:hover {
+        span {
+          transform: translateX(110px);
+        }
+
+        &::before {
+          transform: translateX(0);
+        }
+      }
     }
   }
 }

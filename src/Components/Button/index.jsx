@@ -7,7 +7,7 @@ const Button = React.forwardRef((props, ref) => {
     <div className={styles.button}>
         <Link to={props.linkTo}>
           <button ref={ref}>
-            {props.text}
+            <span>{props.text}</span>
           </button>
         </Link>
     </div>
