@@ -4,6 +4,7 @@
     box-sizing: border-box;
     --primary-color: #1E2019;
     --secundary-color: #D3D0CB;
+    --primary-font: 'Inter', sans-serif;
 }
 
 /* Css Reset */
@@ -54,7 +55,7 @@ table {
 
 body {
     background: var(--secundary-color);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--primary-font);
 }
 
 #root {

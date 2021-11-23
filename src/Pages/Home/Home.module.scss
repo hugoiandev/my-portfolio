@@ -3,6 +3,8 @@
 .home {
   .title {
     margin-top: 200px;
+    position: relative;
+    z-index: -10;
     div {
       overflow: hidden;
       span {
