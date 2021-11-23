@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Button from '../../Components/Button'
 import styles from './Home.module.scss'
 import { gsap } from 'gsap'
 
@@ -7,34 +7,39 @@ const Home = () => {
   const titleOne = React.useRef()
   const titleTwo = React.useRef()
   const titleThree = React.useRef()
-  const button = React.useRef()
+  const buttonSobre = React.createRef()
   
   React.useEffect(() => {
-    gsap.to(titleOne.current, {
-      opacity: 1,
-      y: 0,
-      duration: 0.7
-    })
-    gsap.to(titleTwo.current, {
-      opacity: 1,
-      delay: 0.2,
-      y: 0,
-      duration: 0.7
-    })
-    gsap.to(titleThree.current, {
-      opacity: 1,
-      delay: 0.4,
-      y: 0,
-      duration: 0.7
-    })
 
-    gsap.to(button.current, {
-      opacity: 1,
-      delay: 0.6,
-      y: 0,
-      duration: 0.7
-    })
-  },[])
+    const animeTitle = () => {
+      gsap.to(titleOne.current, {
+        opacity: 1,
+        y: 0,
+        duration: .7
+      })
+      gsap.to(titleTwo.current, {
+        opacity: 1,
+        delay: 0.2,
+        y: 0,
+        duration: .7
+      })
+      gsap.to(titleThree.current, {
+        opacity: 1,
+        delay: 0.4,
+        y: 0,
+        duration: .7
+      })
+  
+      gsap.to(buttonSobre.current, {
+        opacity: 1,
+        delay: 0.6,
+        y: 0,
+        duration: .7
+      })
+    }
+    animeTitle()
+    
+  },[buttonSobre])
 
 
   return (
@@ -50,13 +55,7 @@ const Home = () => {
           <span ref={titleThree}>SOU DEV FRONT-END</span>
         </div>
       </h1>
-      <div className={styles.button}>
-        <Link to='/sobre'>
-          <button ref={button}>
-            Sobre
-          </button>
-        </Link>
-      </div>
+      <Button ref={buttonSobre} linkTo='/sobre' text='Sobre' />
     </section>
   )
 }

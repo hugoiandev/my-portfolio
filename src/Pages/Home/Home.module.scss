@@ -3,6 +3,8 @@
 .home {
   .title {
     margin-top: 200px;
+    position: relative;
+    z-index: -10;
     div {
       overflow: hidden;
       span {
@@ -12,27 +14,6 @@
         line-height: 7rem;
         color: var(--primary-color);
         transform: translateY(100%);
-        opacity: 0;
-      }
-    }
-  }
-
-  .button {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    a {
-      overflow: hidden;
-      button {
-        padding: 10px 60px;
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        border-radius: 5px;
-        border: none;
-        background: #e2c044;
-        color: white;
-        transform: translateY(100%);
-        box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
         opacity: 0;
       }
     }

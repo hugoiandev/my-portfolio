@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* Variables */
 * {
     box-sizing: border-box;
-    --primary-color: #D3D0CB;
+    --primary-color: #1E2019;
+    --secundary-color: #D3D0CB;
+    --primary-font: 'Inter', sans-serif;
 }
 
 /* Css Reset */
@@ -53,8 +54,8 @@ table {
 /* Fim reset */
 
 body {
-    background: #1E2019;
-    font-family: 'Inter', sans-serif;
+    background: var(--secundary-color);
+    font-family: var(--primary-font);
 }
 
 #root {
