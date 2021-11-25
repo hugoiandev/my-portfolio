@@ -1,0 +1,36 @@
+
+.footer {
+  padding: 0 40px;
+  background: var(--primary-color);
+
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+    padding-bottom: 30px;
+
+    .email {
+      overflow: hidden;
+      a {
+        text-decoration: none;
+        color: var(--secundary-color);
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        transform: translateY(40px);
+        opacity: 0;
+        
+        display: block;
+      }
+    }
+
+    .copy {
+      margin-top: 150px;
+      font-size: 1.2rem;
+      color: var(--secundary-color);
+      text-align: center;
+    }
+  }
+}
