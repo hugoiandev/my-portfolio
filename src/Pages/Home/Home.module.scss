@@ -1,10 +1,8 @@
 @import '../../App.css';
 .home {
   height: calc(100vh - 112.8px);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  div {
+  .containerTitle {
+    margin-top: 200px;
     .title {
       position: relative;
       z-index: -10;
@@ -20,6 +18,20 @@
           opacity: 0;
         }
       }
+    }
+  }
+
+  .technologies {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 100px;
+      height: 100px;
     }
   }
 }
