@@ -4,10 +4,10 @@ import styles from './Header.module.scss'
 import { gsap } from 'gsap'
 
 const Header = () => {
-  // Status menu mobile
+  // State menu mobile
   const [menuMobile, setmenuMobile] = React.useState(false)
-  // Ref contact
-  const contatoMenu = React.useRef()
+  // Ref menu content
+  const menuContent = React.useRef()
   // Ref menu list
   const menuList = React.useRef()
 
@@ -17,162 +17,81 @@ const Header = () => {
   const linkAbout = React.useRef()
   const linkContact = React.useRef()
 
-  // Refs of contact
-  const contactTitle = React.useRef()
-  const contactSpan = React.useRef()
-  const contactLinkedin = React.useRef()
-  const contactGithub = React.useRef()
-
+  // Gsap animation
   React.useEffect(() => {
-
-    const animaMenu = () => {
+    // Show menu
+    const showMenu = () => {
       if (menuMobile) {
-        gsap.to(menuList.current, {
-          height: '80vh',
+        gsap.to(menuContent.current, {
+          y: 0,
           duration: 0.5
         })
-  
-        gsap.to(contatoMenu.current, {
-          height: '80vh',
-          duration: 0.5,
-          delay: 0.6
-        })
       } else {
-        gsap.to(contatoMenu.current, {
-          height: '0vh',
-          duration: 0.5,
-          delay: 0.5
-        })
-  
-        gsap.to(menuList.current, {
-          height: '0vh',
+        gsap.to(menuContent.current, {
+          y: '-100vh',
           duration: 0.5,
           delay: 1
         })
       }
     }
 
-    const animaLinks = () => {
-
+    const showMenuItem = () => {
       if (menuMobile) {
         gsap.to(linkHome.current, {
-          duration: 0.7,
           y: 0,
-          delay: 0.5,
-          opacity: 1
+          duration: 0.5,
+          delay: 0.4
         })
         gsap.to(linkProject.current, {
-          duration: 0.7,
           y: 0,
-          delay: 0.5,
-          opacity: 1
+          duration: 0.5,
+          delay: 0.6
         })
         gsap.to(linkAbout.current, {
-          duration: 0.7,
           y: 0,
-          delay: 0.5,
-          opacity: 1
+          duration: 0.5,
+          delay: 0.8
         })
         gsap.to(linkContact.current, {
-          duration: 0.7,
           y: 0,
-          delay: 0.5,
-          opacity: 1
+          duration: 0.5,
+          delay: 1
         })
-
       } else {
         gsap.to(linkHome.current, {
-          duration: 0.7,
-          y: 70,
-          delay: 0.5,
-          opacity: 0
+          y: 110,
+          duration: 0.5,
+          delay: 0.6
         })
         gsap.to(linkProject.current, {
-          duration: 0.7,
-          y: 70,
-          delay: 0.5,
-          opacity: 0
+          y: 110,
+          duration: 0.5,
+          delay: 0.4
         })
         gsap.to(linkAbout.current, {
-          duration: 0.7,
-          y: 70,
-          delay: 0.5,
-          opacity: 0
+          y: 110,
+          duration: 0.5,
+          delay: 0.2
         })
         gsap.to(linkContact.current, {
-          duration: 0.7,
-          y: 70,
-          delay: 0.5,
-          opacity: 0
+          y: 110,
+          duration: 0.5
         })
       }
     }
-
-    const animaContact = () => {
-      if (menuMobile) {
-        gsap.to(contactTitle.current, {
-          duration: 0.7,
-          y: 0,
-          delay: 1,
-          opacity: 1
-        })
-        gsap.to(contactSpan.current, {
-          duration: 0.7,
-          y: 0,
-          delay: 1,
-          opacity: 1
-        })
-        gsap.to(contactLinkedin.current, {
-          duration: 0.7,
-          y: 0,
-          delay: 1,
-          opacity: 1
-        })
-        gsap.to(contactGithub.current, {
-          duration: 0.7,
-          y: 0,
-          delay: 1,
-          opacity: 1
-        })
-
-      } else {
-        gsap.to(contactTitle.current, {
-          duration: 0.7,
-          y: 50,
-          delay: 0.1,
-          opacity: 0
-        })
-        gsap.to(contactSpan.current, {
-          duration: 0.7,
-          y: 50,
-          delay: 0.1,
-          opacity: 0
-        })
-        gsap.to(contactLinkedin.current, {
-          duration: 0.7,
-          y: 50,
-          delay: 0.1,
-          opacity: 0
-        })
-        gsap.to(contactGithub.current, {
-          duration: 0.7,
-          y: 50,
-          delay: 0.1,
-          opacity: 0
-        })
-      }
-    }
-    animaMenu()
-    animaLinks()
-    animaContact()
+    showMenu()
+    showMenuItem()
 
   }, [menuMobile])
 
   return (
     <header className={styles.header}>
-      <div>
-        <Link className={styles.logo} to='/'>Hugo Ian</Link>
-      </div>
+      <Link to='/' style={{ textDecoration: 'none' }}>
+        <div className={styles.logo}>
+          <h2>HUGO IAN</h2>
+          <span>Front-end developer</span>
+        </div>
+      </Link>
       <nav className={styles.menu}>
         <button
           onClick={() => setmenuMobile(!menuMobile)}
@@ -181,40 +100,26 @@ const Header = () => {
             className={menuMobile ? styles.menuMobileOpen : styles.menuMobileClosed}
           />
         </button>
-        <div className={styles.menuContent}>
-          <div ref={contatoMenu} className={styles.contato}>
-            <div>
-              <div>
-                <h2 ref={contactTitle}>Entre em contato</h2>
-              </div>
-              <div>
-                <span ref={contactSpan}>hugofrontdev@gmail.com</span>
-              </div>
-              <div>
-                <a ref={contactLinkedin} href="https://linkedin.com/in/hugoian">Linkedin</a>
-                <a ref={contactGithub} href="https://github.com/hugoiandev">GITHUB</a>
-              </div>
-            </div>
-          </div>
+        <div ref={menuContent} className={styles.menuContent}>
           <div ref={menuList} className={styles.menuList}>
             <ul>
               <div>
                 <li ref={linkHome}><Link to='/'>Home</Link></li>
               </div>
               <div>
-                <li ref={linkProject}><Link to='/projetos'>Projetos</Link></li>
+                <li ref={linkProject}><Link to='/projects'>Projetos</Link></li>
               </div>
               <div>
-                <li ref={linkAbout}><Link to='/sobre'>Sobre</Link></li>
+                <li ref={linkAbout}><Link to='/about'>Sobre</Link></li>
               </div>
               <div>
-                <li ref={linkContact}><Link to='/contato'>Contato</Link></li>
+                <li ref={linkContact}><Link to='/contact'>Contato</Link></li>
               </div>
             </ul>
           </div>
         </div>
       </nav>
-    </header>
+  </header>
   )
 }
 

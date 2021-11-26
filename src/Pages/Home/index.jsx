@@ -44,17 +44,19 @@ const Home = () => {
 
   return (
     <section className={styles.home}>
-      <h1 className={styles.title}>
-        <div>
-          <span ref={titleOne}>OLÁ</span>
-        </div>
-        <div>
-          <span ref={titleTwo}>SEJA BEM VINDO</span>
-        </div>
-        <div>
-          <span ref={titleThree}>SOU DEV FRONT-END</span>
-        </div>
-      </h1>
+      <div>
+        <h1 className={styles.title}>
+          <div>
+            <span ref={titleOne}>OLÁ</span>
+          </div>
+          <div>
+            <span ref={titleTwo}>SEJA BEM VINDO</span>
+          </div>
+          <div>
+            <span ref={titleThree}>SOU DEV FRONT-END</span>
+          </div>
+        </h1>
+      </div>
       <Button ref={buttonSobre} linkTo='/sobre' text='Sobre' />
     </section>
   )

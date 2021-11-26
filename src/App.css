@@ -57,8 +57,3 @@ body {
     background: var(--secundary-color);
     font-family: var(--primary-font);
 }
-
-#root {
-    max-width: 1366px;
-    margin: 0 auto;
-}
