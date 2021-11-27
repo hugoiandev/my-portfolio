@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../../Components/Button'
+import Overload from '../../Components/Overload'
 import styles from './Home.module.scss'
 import { gsap } from 'gsap'
 
@@ -15,17 +16,18 @@ const Home = () => {
       gsap.to(titleOne.current, {
         opacity: 1,
         y: 0,
-        duration: .7
+        duration: .7,
+        delay: 1.5
       })
       gsap.to(titleTwo.current, {
         opacity: 1,
-        delay: 0.2,
+        delay: 1.7,
         y: 0,
         duration: .7
       })
       gsap.to(titleThree.current, {
         opacity: 1,
-        delay: 0.4,
+        delay: 1.9,
         y: 0,
         duration: .7
       })
@@ -61,6 +63,7 @@ const Home = () => {
         </div>
         <Button ref={buttonSobre} linkTo='/sobre' text='Projetos' />
       </section>
+      <Overload text='Hello' />
     </>
   )
 }

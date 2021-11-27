@@ -1,0 +1,22 @@
+
+.overload {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+
+  .overloadContent {
+    span {
+      display: block;
+      font-size: 8rem;
+      color: var(--secundary-color);
+    }
+  }
+}
