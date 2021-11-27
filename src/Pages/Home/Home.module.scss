@@ -1,13 +1,8 @@
 @import '../../App.css';
 .home {
-  height: calc(100vh - 112.8px);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  div {
+  .containerTitle {
+    margin-top: 200px;
     .title {
-      position: relative;
-      z-index: -10;
       div {
         overflow: hidden;
         span {

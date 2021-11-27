@@ -10,7 +10,7 @@ const Home = () => {
   const buttonSobre = React.createRef()
   
   React.useEffect(() => {
-
+    // Gsap animation
     const animeTitle = () => {
       gsap.to(titleOne.current, {
         opacity: 1,
@@ -37,28 +37,31 @@ const Home = () => {
         duration: .7
       })
     }
+
     animeTitle()
     
   },[buttonSobre])
 
 
   return (
-    <section className={styles.home}>
-      <div>
-        <h1 className={styles.title}>
-          <div>
-            <span ref={titleOne}>OLÁ</span>
-          </div>
-          <div>
-            <span ref={titleTwo}>SEJA BEM VINDO</span>
-          </div>
-          <div>
-            <span ref={titleThree}>SOU DEV FRONT-END</span>
-          </div>
-        </h1>
-      </div>
-      <Button ref={buttonSobre} linkTo='/sobre' text='Sobre' />
-    </section>
+    <>
+      <section className={styles.home}>
+        <div className={styles.containerTitle}>
+          <h1 className={styles.title}>
+            <div>
+              <span ref={titleOne}>OLÁ</span>
+            </div>
+            <div>
+              <span ref={titleTwo}>SEJA BEM VINDO</span>
+            </div>
+            <div>
+              <span ref={titleThree}>SOU DEV FRONT-END</span>
+            </div>
+          </h1>
+        </div>
+        <Button ref={buttonSobre} linkTo='/sobre' text='Projetos' />
+      </section>
+    </>
   )
 }
 
