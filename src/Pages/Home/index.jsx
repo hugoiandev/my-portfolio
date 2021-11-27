@@ -8,10 +8,9 @@ const Home = () => {
   const titleTwo = React.useRef()
   const titleThree = React.useRef()
   const buttonSobre = React.createRef()
-  const techContent = React.useRef()
   
   React.useEffect(() => {
-    // Title animation
+    // Gsap animation
     const animeTitle = () => {
       gsap.to(titleOne.current, {
         opacity: 1,
@@ -39,24 +38,6 @@ const Home = () => {
       })
     }
 
-    // Tech animation
-    const animeTech = () => {
-      const width = techContent.current.offsetWidth
-      gsap.fromTo(techContent.current, {
-        x: width,
-        duration: 20,
-        ease: 'linear',
-        repeat: -1
-      }, {
-        x: -width,
-        duration: 20,
-        ease: 'linear',
-        repeat: -1
-        
-      })
-    }
-
-    animeTech()
     animeTitle()
     
   },[buttonSobre])
@@ -78,15 +59,7 @@ const Home = () => {
             </div>
           </h1>
         </div>
-        <Button ref={buttonSobre} linkTo='/sobre' text='Sobre' />
-        <div ref={techContent} className={styles.technologies}>
-          <img src="icon-node.svg" alt="" />
-          <img src="icon-javascript.svg" alt="" />
-          <img src="icon-react-native.svg" alt="" />
-          <img src="icon-sass.svg" alt="" />
-          <img src="icon-github.svg" alt="" />
-          <img src="icon-git.svg" alt="" />
-        </div>
+        <Button ref={buttonSobre} linkTo='/sobre' text='Projetos' />
       </section>
     </>
   )

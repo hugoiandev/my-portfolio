@@ -4,15 +4,12 @@
   background: var(--primary-color);
 
   .footerContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-top: 300px;
     padding-bottom: 30px;
 
     .email {
       overflow: hidden;
+      text-align: center;
       a {
         text-decoration: none;
         color: var(--secundary-color);

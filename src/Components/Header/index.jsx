@@ -101,6 +101,13 @@ const Header = () => {
           />
         </button>
         <div ref={menuContent} className={styles.menuContent}>
+          <button
+            onClick={() => setmenuMobile(!menuMobile)}
+          >
+            <div
+              className={menuMobile ? styles.menuMobileOpen : styles.menuMobileClosed}
+            />
+          </button>
           <div ref={menuList} className={styles.menuList}>
             <ul>
               <div>
