@@ -111,16 +111,24 @@ const Header = () => {
           <div ref={menuList} className={styles.menuList}>
             <ul>
               <div>
-                <li ref={linkHome}><Link to='/'>Home</Link></li>
+                <li ref={linkHome}>
+                  <Link onClick={() => setmenuMobile(false)} to='/'>Home</Link>
+                </li>
               </div>
               <div>
-                <li ref={linkProject}><Link to='/projects'>Projetos</Link></li>
+                <li ref={linkProject}>
+                  <Link onClick={() => setmenuMobile(false)} to='/projects'>Projetos</Link>
+                </li>
               </div>
               <div>
-                <li ref={linkAbout}><Link to='/about'>Sobre</Link></li>
+                <li ref={linkAbout}>
+                  <Link onClick={() => setmenuMobile(false)} to='/about'>Sobre</Link>
+                </li>
               </div>
               <div>
-                <li ref={linkContact}><Link to='/contact'>Contato</Link></li>
+                <li ref={linkContact}>
+                  <Link onClick={() => setmenuMobile(false)} to='/contact'>Contato</Link>
+                </li>
               </div>
             </ul>
           </div>
