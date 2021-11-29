@@ -1,11 +1,8 @@
 
 .projects {
   height: 100vh;
-  .containerTitle {
-    margin-top: 100px;
-    .title {
-      font-size: 8rem;
-      color: var(--primary-color);
-    }
+
+  .item {
+    margin-top: 200px;
   }
 }

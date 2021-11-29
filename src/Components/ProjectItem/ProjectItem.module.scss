@@ -1,0 +1,17 @@
+
+.link {
+  text-decoration: none;
+
+  .containerItem {
+    display: flex;
+
+    .imgItem {
+      width: 600px;
+      height: 1000px;
+      img {
+        width: 100%;
+        max-height: 600px;
+      }
+    }
+  }
+}

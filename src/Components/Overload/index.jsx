@@ -12,14 +12,16 @@ const Overload = ({ text }) => {
         height: '0vh',
         duration: 1,
         delay: 0.8,
-        ease: Power4.easeInOut
+        ease: Power4.easeInOut,
+        display: 'none'
       })
 
       gsap.to(overloadText.current, {
         y: -50,
         duration: 0.5,
         delay: 0.5,
-        opacity: 0
+        opacity: 0,
+        display: 'none'
       })
     }
 

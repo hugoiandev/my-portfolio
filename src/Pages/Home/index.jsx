@@ -65,7 +65,7 @@ const Home = () => {
               </div>
             </h1>
           </div>
-          <Button ref={buttonSobre} linkTo='/sobre' text='Projetos' />
+          <Button ref={buttonSobre} linkTo='/projects' text='Projetos' />
         </section>
       </Container>
       <Technologies />
