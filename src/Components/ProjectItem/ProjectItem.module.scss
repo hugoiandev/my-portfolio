@@ -1,10 +1,10 @@
 
 .link {
   text-decoration: none;
+  width: 100vw;
 
   .containerItem {
     display: flex;
-    justify-content: center;
 
     .about {
       margin-right: 30px;
@@ -37,11 +37,20 @@
           }
         }
       }
+
+      .button {
+        margin-top: 50px;
+        font-size: 1rem;
+        color: var(--secundary-color);
+        background: var(--primary-color);
+        border: none;
+        padding: 10px 50px;
+      }
     }
 
     .imgItem {
-      width: 600px;
       overflow: hidden;
+      width: 600px;
       img {
         width: 100%;
         max-height: 500px;

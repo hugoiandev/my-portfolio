@@ -18,6 +18,9 @@ const ProjectItem = ({ link, name, text, src, alt, techSrc }) => {
               })}
             </div>
           </div>
+          <button className={styles.button}>
+              Ver mais
+          </button>
         </div>
         <div className={styles.imgItem}>
           <img src={src} alt={alt} />
