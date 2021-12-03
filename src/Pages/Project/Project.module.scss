@@ -1,0 +1,28 @@
+
+.projects {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  position: relative;
+
+  .arrow {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    cursor: pointer;
+    z-index: 1000;
+
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  .item {
+    display: flex;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: max-content;
+  }
+}

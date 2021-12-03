@@ -12,12 +12,12 @@ const Technologies = () => {
       // Gsap animation
       gsap.fromTo(techContent.current, {
         x: '100vw',
-        duration: 20,
+        duration: 10,
         ease: 'linear',
         repeat: -1
       }, {
         x: -width,
-        duration: 20,
+        duration: 10,
         ease: 'linear',
         repeat: -1
       })
