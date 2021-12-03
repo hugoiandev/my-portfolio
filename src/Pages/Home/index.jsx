@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '../../Components/Container'
 import Button from '../../Components/Button'
 import Technologies from '../../Components/Technologies'
-import Overload from '../../Components/Overload'
+import Preload from '../../Components/Preload'
 import styles from './Home.module.scss'
 import { gsap } from 'gsap'
 
@@ -69,7 +69,7 @@ const Home = () => {
         </section>
       </Container>
       <Technologies />
-      <Overload text='Hello' />
+      <Preload text='Hello' />
     </>
   )
 }

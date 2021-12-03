@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../../Components/Container'
-import Overload from '../../Components/Overload'
+import Preload from '../../Components/Preload'
 import ProjectItem from '../../Components/ProjectItem'
 import Title from '../../Components/Title'
 import styles from './Project.module.scss'
@@ -101,7 +101,7 @@ const Project = () => {
           </div>
         </section>
       </Container>
-      <Overload text='Projetos' />
+      <Preload text='Projetos' />
     </>
   )
 }
