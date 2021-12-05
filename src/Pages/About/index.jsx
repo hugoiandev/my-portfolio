@@ -13,14 +13,14 @@ const About = () => {
     const animaAbout = () => {
       gsap.to(refText.current, {
         y: 0,
-        duration: 1,
+        duration: 0.8,
         delay: 2,
         opacity: 1
       })
 
       gsap.to(refPhoto.current, {
         y: 0,
-        duration: 1,
+        duration: 0.8,
         delay: 2.5,
         opacity: 1
       })

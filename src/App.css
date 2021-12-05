@@ -57,5 +57,8 @@ body {
     background: var(--secundary-color);
     font-family: var(--primary-font);
     overflow-x: hidden;
+}
+
+html {
     scroll-behavior: smooth;
 }
