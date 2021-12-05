@@ -28,7 +28,6 @@ const Technologies = () => {
 
   return (
     <div ref={techContent} className={styles.technologies}>
-      <img src="icon-node.svg" alt="" />
       <img src="icon-javascript.svg" alt="" />
       <img src="icon-react-native.svg" alt="" />
       <img src="icon-sass.svg" alt="" />
