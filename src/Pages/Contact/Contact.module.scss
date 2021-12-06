@@ -1,0 +1,39 @@
+
+.contact {
+  margin-bottom: 600px;
+
+  .containerContact {
+    display: flex;
+    margin-top: 200px;
+
+    .email {
+      span {
+        display: block;
+        margin-right: 400px;
+
+        &:nth-child(1) {
+          font-size: 13px;
+          font-weight: bold;
+          color: #464646;
+          margin-bottom: 8px;
+        }
+        &:nth-child(2) {
+          a {
+            font-size: 50px;
+            color: var(--primary-color);
+            text-decoration: none;
+          }
+          
+        }
+      }
+    }
+
+    .redes {
+      span {
+        font-size: 13px;
+        color: #464646;
+        font-weight: bold;
+      }
+    }
+  }
+}
