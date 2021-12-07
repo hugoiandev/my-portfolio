@@ -1,0 +1,60 @@
+
+.contact {
+  margin-bottom: 400px;
+
+  .containerContact {
+    display: flex;
+    margin-top: 200px;
+
+    .email {
+      span {
+        display: block;
+        margin-right: 400px;
+
+        &:nth-child(1) {
+          font-size: 13px;
+          font-weight: bold;
+          color: #5f5f5f;
+          margin-bottom: 8px;
+        }
+        &:nth-child(2) {
+          a {
+            font-size: 50px;
+            color: var(--primary-color);
+            text-decoration: none;
+            transform: rotateX(90deg);
+            opacity: 0;
+            display: block;
+          }
+          
+        }
+      }
+    }
+
+    .redes {
+      span {
+        display: block;
+        font-size: 13px;
+        color: #5f5f5f;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .icons {
+        div {
+          transform: rotateX(90deg);
+          opacity: 0;
+          
+          a {
+            text-decoration: none;
+            img {
+              height: 50px;
+              width: 50px;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
