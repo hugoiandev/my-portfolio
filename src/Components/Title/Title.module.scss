@@ -2,10 +2,23 @@
 .containerTitle {
   margin-top: 100px;
 
-  .title {
-    font-size: 8rem;
-    color: var(--primary-color);
-    transform: translateY(60px);
-    opacity: 0;
+  .containerSubtitle {
+    overflow: hidden;
+    span {
+      color: #5f5f5f;
+      display: block;
+      margin-left: 80px;
+      font-weight: bold;
+      transform: translateY(100%);
+    }
+  }
+
+  .textTitle {
+    .title {
+      font-size: 8rem;
+      color: var(--primary-color);
+      transform: translateY(60px);
+      opacity: 0;
+    }
   }
 }

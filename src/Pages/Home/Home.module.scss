@@ -1,15 +1,15 @@
 @import '../../App.css';
 .home {
   .containerTitle {
-    margin-top: 200px;
+    margin-top: 100px;
     .title {
       div {
         overflow: hidden;
         span {
           display: block;
-          font-size: 6rem;
+          font-size: 8rem;
           font-weight: bold;
-          line-height: 7rem;
+          line-height: 10rem;
           color: var(--primary-color);
           transform: translateY(100%);
           opacity: 0;

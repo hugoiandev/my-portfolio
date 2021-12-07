@@ -40,7 +40,7 @@ const Project = () => {
           >
             <img src="arrow-pointer.svg" alt="Arrow" />
           </button>
-          <Title text='Projetos' />
+          <Title text='Projetos' subTitle='Conheça meus projetos' />
           <div ref={itemRef} className={styles.item}>
             <ProjectItem
               name='Breaking Bad'
