@@ -5,25 +5,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
-  
-  .logo {
-    h2 {
-      font-size: 2rem;
-      font-weight: 300;
-      text-decoration: none;
-      color: var(--primary-color);
-      border-bottom: 1px solid var(--primary-color);
-    }
-    
-    span {
-      font-size: 0.8rem;
-      font-style: italic;
-      text-align: center;
-      color: var(--primary-color);
-      margin-top: 7px;
-      display: block;
-    }
-  }
 
   .menu {
     button {

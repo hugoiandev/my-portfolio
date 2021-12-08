@@ -87,10 +87,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link to='/' style={{ textDecoration: 'none' }}>
-        <div className={styles.logo}>
-          <h2>HUGO IAN</h2>
-          <span>Front-end developer</span>
-        </div>
+        <img src="logo.svg" alt="Logo" />
       </Link>
       <nav className={styles.menu}>
         <button
