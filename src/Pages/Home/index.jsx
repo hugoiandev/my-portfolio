@@ -3,6 +3,7 @@ import Container from '../../Components/Container'
 import Button from '../../Components/Button'
 import Technologies from '../../Components/Technologies'
 import Preload from '../../Components/Preload'
+import IntroText from '../../Components/IntroText'
 import styles from './Home.module.scss'
 import { gsap } from 'gsap'
 
@@ -54,15 +55,7 @@ const Home = () => {
         <section className={styles.home}>
           <div className={styles.containerTitle}>
             <h1 className={styles.title}>
-              <div>
-                <span ref={titleOne}>OLÁ</span>
-              </div>
-              <div>
-                <span ref={titleTwo}>SEJA BEM VINDO</span>
-              </div>
-              <div>
-                <span ref={titleThree}>SOU DEV FRONT-END</span>
-              </div>
+              <IntroText text={['Olá', 'Hello', 'Hola']} />
             </h1>
           </div>
           <Button ref={buttonSobre} linkTo='/projects' text='Projetos' />

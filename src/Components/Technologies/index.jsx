@@ -52,9 +52,10 @@ const Technologies = () => {
 
   return (
     <div ref={techContent} className={styles.technologies}>
-      {srcs && srcs.map((item) => {
+      {srcs && srcs.map((item, index) => {
         return (
           <img
+            key={index}
             src={item.src}
             alt={item.alt}
           />
