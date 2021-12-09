@@ -1,0 +1,15 @@
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -99999;
+  transform: translate(-100px, -100px);
+  .pointer {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    background: none;
+  }
+}

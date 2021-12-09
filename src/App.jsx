@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './routes'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import MousePointer from './Components/MousePointer'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Header />
         <Routes />
         <Footer />
+        <MousePointer />
       </Router>
     </div>
   )

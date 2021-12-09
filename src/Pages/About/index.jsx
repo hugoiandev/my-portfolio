@@ -37,7 +37,7 @@ const About = () => {
           <Title text='Sobre' subTitle='Conheça mais sobre mim' />
           <div className={styles.aboutContainer}>
             <article ref={refText} className={styles.textAbout}>
-              <p>Olá, meu nome é Hugo, tenho 23 anos e atualmente moro em Hortolândia/SP, gosto bastante de ouvir músicas e programar. Desde meus 13 anos eu já sentia essa paixão tecnologica, mas ingressei na área de desenvolvimento no final do ano de 2019 e foi ai que realmente entrei nesse mundo, atualmente tenho focado meus estudos no desenvolvimento web onde tenho mais familiariadade, tenho conhecimento em ReactJS, NextJS, Sass, Styled components e o básico de Api's com NodeJS.</p>
+              <p>Olá, meu nome é <span className={styles.myName}>Hugo</span>, tenho 23 anos e atualmente moro em Hortolândia/SP, gosto bastante de ouvir músicas e programar. Desde meus 13 anos eu já sentia essa paixão tecnologica, mas ingressei na área de desenvolvimento no final do ano de 2019 e foi ai que realmente entrei nesse mundo, atualmente tenho focado meus estudos no desenvolvimento web onde tenho mais familiariadade, tenho conhecimento em ReactJS, NextJS, Sass, Styled components e o básico de Api's com NodeJS.</p>
             </article>
             <div ref={refPhoto} className={styles.imgAbout}>
               <img src="img-about.jpg" alt="Foto Hugo" />
