@@ -20,9 +20,7 @@ const MousePointer = () => {
   }, [])
 
   return (
-    <div className={styles.cursor} ref={refPointer}>
-      <div className={styles.pointer}></div>
-    </div>
+    <div ref={refPointer} className={styles.pointer}></div>
   )
 }
 
