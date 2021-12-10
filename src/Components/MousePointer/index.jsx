@@ -13,7 +13,7 @@ const MousePointer = () => {
       gsap.to(refPointer.current, {
         y: clientY,
         x: clientX,
-        duration: 0.2
+        duration: 1
       })
       
     })

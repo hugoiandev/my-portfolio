@@ -51,16 +51,16 @@ const Home = () => {
 
   return (
     <>
-      <Container>
-        <section className={styles.home}>
-          <div className={styles.containerTitle}>
-            <h1 className={styles.title}>
-              <IntroText text={['Olá', 'Hello', 'Hola']} />
-            </h1>
-          </div>
-          <Button ref={buttonSobre} linkTo='/projects' text='Projetos' />
-        </section>
-      </Container>
+      <section className={styles.home}>
+        <div className={styles.containerTitle}>
+          <h1 className={styles.title}>
+            <IntroText text={['Olá', 'Hello', 'Hola', 'こんにちは']} delay={0} />
+            <IntroText text={['Seja bem vindo', 'Welcome', 'Sea bienvenido', 'いらっしゃいませ']} delay={0.2} />
+            <IntroText text={['Sou dev Front-end', "I'm dev Front-end", 'Soy dev Front-end', '私は開発フロントエンドです']} delay={0.4} />
+          </h1>
+        </div>
+        <Button ref={buttonSobre} linkTo='/projects' text='Projetos' />
+      </section>
       <Technologies />
       <Preload text='Hello' />
     </>
