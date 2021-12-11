@@ -3,6 +3,22 @@
   height: 150px;
   margin-bottom: 20px;
 
+  @mixin cubeHeight($height) {
+    height: $height;
+  }
+
+  @media(max-width: 1600px) {
+    @include cubeHeight(120px)
+  }
+
+  @media(max-width: 1235px) {
+    @include cubeHeight(80px)
+  }
+
+  @media(max-width: 800px) {
+    @include cubeHeight(40px)
+  }
+
   .text {
     display: block;
     font-size: 8rem;
@@ -30,6 +46,56 @@
     &:nth-child(4) {
       transform: translateY(75px) rotateX(-90deg);
     }
+
+    @mixin fontSize($fontSize, $translate, $height) {
+      font-size: $fontSize;
+      transform: $translate;
+      height: $height;
+    }
   
+    @media(max-width: 1600px) {
+      &:nth-child(1) {
+        @include fontSize(6rem, translateZ(60px), 120px)
+      }
+      &:nth-child(2) {
+        @include fontSize(6rem, translateY(-60px) rotateX(90deg), 120px)
+      }
+      &:nth-child(3) {
+        @include fontSize(6rem, translateZ(-60px) rotateX(180deg), 120px)
+      }
+      &:nth-child(4) {
+        @include fontSize(6rem, translateY(60px) rotateX(-90deg), 120px)
+      }
+    }
+
+    @media(max-width: 1235px) {
+      &:nth-child(1) {
+        @include fontSize(4rem, translateZ(40px), 80px)
+      }
+      &:nth-child(2) {
+        @include fontSize(4rem, translateY(-40px) rotateX(90deg), 80px)
+      }
+      &:nth-child(3) {
+        @include fontSize(4rem, translateZ(-40px) rotateX(180deg), 80px)
+      }
+      &:nth-child(4) {
+        @include fontSize(4rem, translateY(40px) rotateX(-90deg), 80px)
+      }
+    }
+
+    @media(max-width: 800px) {
+      &:nth-child(1) {
+        @include fontSize(2rem, translateZ(20px), 40px)
+      }
+      &:nth-child(2) {
+        @include fontSize(2rem, translateY(-20px) rotateX(90deg), 40px)
+      }
+      &:nth-child(3) {
+        @include fontSize(2rem, translateZ(-20px) rotateX(180deg), 40px)
+      }
+      &:nth-child(4) {
+        @include fontSize(2rem, translateY(20px) rotateX(-90deg), 40px)
+      }
+    }
   }
 }

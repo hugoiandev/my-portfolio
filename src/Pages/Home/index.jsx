@@ -54,9 +54,9 @@ const Home = () => {
       <section className={styles.home}>
         <div className={styles.containerTitle}>
           <h1 className={styles.title}>
-            <IntroText text={['Olá', 'Hello', 'Hola', 'こんにちは']} delay={0} />
-            <IntroText text={['Seja bem vindo', 'Welcome', 'Sea bienvenido', 'いらっしゃいませ']} delay={0.2} />
-            <IntroText text={['Sou dev Front-end', "I'm dev Front-end", 'Soy dev Front-end', '私は開発フロントエンドです']} delay={0.4} />
+            <IntroText text={['Olá', 'Hello', 'Hola', 'Bonjour']} delay={0} />
+            <IntroText text={['Seja bem vindo', 'Welcome', 'Sea bienvenido', 'Bienvenue']} delay={0.2} />
+            <IntroText text={['Sou dev Front-end', "I'm dev Front-end", 'Soy dev Front-end', 'Je suis dev Front-end']} delay={0.4} />
           </h1>
         </div>
         <Button ref={buttonSobre} linkTo='/projects' text='Projetos' />

@@ -1,7 +1,12 @@
 @import '../../App.css';
 .home {
   margin-top: 100px;
+
   .containerTitle {
-    padding: 0 100px 0 100px;
+    padding-left: 100px;
+
+    @media(max-width: 800px) {
+      padding-left: 40px;
+    }
   }
 }
