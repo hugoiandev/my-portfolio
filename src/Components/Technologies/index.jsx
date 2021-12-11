@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 
 const Technologies = () => {
   const techContent = React.useRef()
+  const [srcs, setSrcs] = React.useState([])
 
   React.useEffect(() => {
     const animeTech = () => {
@@ -23,16 +24,43 @@ const Technologies = () => {
       })
     }
 
+    setSrcs([
+      {
+        src: 'icon-javascript.svg',
+        alt: 'Icone Javascript'
+      },
+      {
+        src: 'icon-react-native.svg',
+        alt: 'Icone React'
+      },
+      {
+        src: 'icon-sass.svg',
+        alt: 'Icone Sass'
+      },
+      {
+        src: 'icon-github.svg',
+        alt: 'Icone Github'
+      },
+      {
+        src: 'icon-git.svg',
+        alt: 'Icone Git'
+      }
+    ])
+
     animeTech()
-  })
+  }, [])
 
   return (
     <div ref={techContent} className={styles.technologies}>
-      <img src="icon-javascript.svg" alt="" />
-      <img src="icon-react-native.svg" alt="" />
-      <img src="icon-sass.svg" alt="" />
-      <img src="icon-github.svg" alt="" />
-      <img src="icon-git.svg" alt="" />
+      {srcs && srcs.map((item, index) => {
+        return (
+          <img
+            key={index}
+            src={item.src}
+            alt={item.alt}
+          />
+        )
+      })}
     </div>
   )
 }

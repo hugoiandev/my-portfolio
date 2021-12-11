@@ -3,6 +3,7 @@ import Container from '../../Components/Container'
 import Button from '../../Components/Button'
 import Technologies from '../../Components/Technologies'
 import Preload from '../../Components/Preload'
+import IntroText from '../../Components/IntroText'
 import styles from './Home.module.scss'
 import { gsap } from 'gsap'
 
@@ -50,24 +51,16 @@ const Home = () => {
 
   return (
     <>
-      <Container>
-        <section className={styles.home}>
-          <div className={styles.containerTitle}>
-            <h1 className={styles.title}>
-              <div>
-                <span ref={titleOne}>OLÁ</span>
-              </div>
-              <div>
-                <span ref={titleTwo}>SEJA BEM VINDO</span>
-              </div>
-              <div>
-                <span ref={titleThree}>SOU DEV FRONT-END</span>
-              </div>
-            </h1>
-          </div>
-          <Button ref={buttonSobre} linkTo='/projects' text='Projetos' />
-        </section>
-      </Container>
+      <section className={styles.home}>
+        <div className={styles.containerTitle}>
+          <h1 className={styles.title}>
+            <IntroText text={['Olá', 'Hello', 'Hola', 'Bonjour']} delay={0} />
+            <IntroText text={['Seja bem vindo', 'Welcome', 'Sea bienvenido', 'Bienvenue']} delay={0.2} />
+            <IntroText text={['Sou dev Front-end', "I'm dev Front-end", 'Soy dev Front-end', 'Je suis dev Front-end']} delay={0.4} />
+          </h1>
+        </div>
+        <Button ref={buttonSobre} linkTo='/projects' text='Projetos' />
+      </section>
       <Technologies />
       <Preload text='Hello' />
     </>

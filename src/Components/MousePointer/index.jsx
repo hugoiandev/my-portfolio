@@ -13,16 +13,14 @@ const MousePointer = () => {
       gsap.to(refPointer.current, {
         y: clientY,
         x: clientX,
-        duration: 0.2
+        duration: 1
       })
       
     })
   }, [])
 
   return (
-    <div className={styles.cursor} ref={refPointer}>
-      <div className={styles.pointer}></div>
-    </div>
+    <div ref={refPointer} className={styles.pointer}></div>
   )
 }
 
