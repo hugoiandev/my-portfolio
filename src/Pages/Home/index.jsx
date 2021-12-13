@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from '../../Components/Container'
 import Button from '../../Components/Button'
 import Technologies from '../../Components/Technologies'
 import Preload from '../../Components/Preload'
