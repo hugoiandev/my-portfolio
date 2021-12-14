@@ -1,65 +1,69 @@
 
-.link {
-  text-decoration: none;
+.containerItem {
+  display: flex;
 
-  .containerItem {
-    display: flex;
+  .about {
+    margin-right: 30px;
+    overflow: hidden;
+    h2 {
+      font-size: 2.7rem;
+      color: var(--primary-color);
+      font-weight: bold;
+      transform: translateX(-100%);
+    }
+    p {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      max-width: 450px;
+      color: #383838;
+      line-height: 25px;
+      transform: translateX(-100%);
+    }
 
-    .about {
-      margin-right: 30px;
-      h2 {
-        font-size: 2.7rem;
+    .tech {
+      margin-top: 50px;
+      overflow: hidden;
+
+      span {
+        font-size: 1.8rem;
         color: var(--primary-color);
         font-weight: bold;
+        display: block;
+        transform: translateX(-100%);
       }
-      p {
+
+      .techSource {
         margin-top: 30px;
-        font-size: 1.1rem;
-        max-width: 450px;
-        color: #383838;
-        line-height: 25px;
-      }
-
-      .tech {
-        margin-top: 50px;
-
-        span {
-          font-size: 2rem;
-          color: var(--primary-color);
-          font-weight: bold;
+        transform: translateX(-100%);
+        img {
+          width: 40px;
+          height: 40px;
+          margin-right: 15px;
         }
-
-        .techSource {
-          margin-top: 30px;
-          img {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
-          }
-        }
-      }
-
-      .button {
-        margin-top: 50px;
-        font-size: 1rem;
-        color: var(--secundary-color);
-        background: var(--primary-color);
-        border: none;
-        padding: 10px 50px;
       }
     }
 
-    .imgItem {
-      overflow: hidden;
-      width: 600px;
-      img {
-        width: 100%;
-        max-height: 500px;
-        transition: 0.3s;
+    .button {
+      margin-top: 50px;
+      font-size: 1rem;
+      color: var(--secundary-color);
+      background: var(--primary-color);
+      border: none;
+      padding: 10px 50px;
+      transform: translateX(-100%);
+    }
+  }
 
-        &:hover {
-          transform: scale(1.1);
-        }
+  .imgItem {
+    overflow: hidden;
+    width: 600px;
+    img {
+      width: 100%;
+      max-height: 500px;
+      transform: translateX(100%);
+
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }
