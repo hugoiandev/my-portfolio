@@ -13,7 +13,8 @@ const MousePointer = () => {
       gsap.to(refPointer.current, {
         y: clientY,
         x: clientX,
-        duration: 1
+        duration: 0.3,
+        ease: 'cubic-bezier(.23,1,.32,1)'
       })
       
     })

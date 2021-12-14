@@ -12,17 +12,15 @@ const Contact = () => {
   React.useEffect(() => {
     const animaContact = () => {
       gsap.to(refEmail.current, {
-        rotateX: 0,
+        x: 0,
         duration: 0.5,
-        delay: 2,
-        opacity: 1
+        delay: 1.8
       })
 
       gsap.to(refIcons.current, {
-        rotateX: 0,
+        x: 0,
         duration: 0.5,
-        delay: 2.5,
-        opacity: 1
+        delay: 2.2
       })
     }
 
