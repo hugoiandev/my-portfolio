@@ -12,14 +12,17 @@ const IntroText = ({ text, delay }) => {
       duration: 0.5,
       delay: delay
     })
+    
+    const timer = setInterval(() => {
+      setRotateText(rotateText - 90)
+      return clearInterval(timer)
+  
+    }, 4000)
 
+    return () => {
+      clearInterval(timer)
+    }
   }, [rotateText, delay])
-
-  const timer = setInterval(() => {
-    setRotateText(rotateText - 90)
-    return clearInterval(timer)
-
-  }, 4000)
 
   return (
     <div ref={refCube} className={styles.containerCube}>

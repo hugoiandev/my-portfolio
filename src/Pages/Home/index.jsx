@@ -10,7 +10,6 @@ const Home = () => {
   const titleOne = React.useRef()
   const titleTwo = React.useRef()
   const titleThree = React.useRef()
-  const buttonSobre = React.createRef()
   
   React.useEffect(() => {
     // Gsap animation
@@ -18,34 +17,26 @@ const Home = () => {
       gsap.to(titleOne.current, {
         opacity: 1,
         y: 0,
-        duration: .7,
+        duration: 0.7,
         delay: 1.5
       })
       gsap.to(titleTwo.current, {
         opacity: 1,
         delay: 1.7,
         y: 0,
-        duration: .7
+        duration: 0.7
       })
       gsap.to(titleThree.current, {
         opacity: 1,
         delay: 1.9,
         y: 0,
-        duration: .7
+        duration: 0.7
       })
-  
-      gsap.to(buttonSobre.current, {
-        opacity: 1,
-        delay: 0.6,
-        y: 0,
-        duration: .7
-      })
-
     }
 
     animeTitle()
     
-  },[buttonSobre])
+  },[])
 
 
   return (
@@ -58,7 +49,7 @@ const Home = () => {
             <IntroText text={['Sou dev Front-end', "I'm dev Front-end", 'Soy dev Front-end', 'Je suis dev Front-end']} delay={0.4} />
           </h1>
         </div>
-        <Button ref={buttonSobre} linkTo='/projects' text='Projetos' />
+        <Button link='/projects' textOne='Projetos' textTwo='Ir' />
       </section>
       <Technologies />
       <Preload text='Hello' />

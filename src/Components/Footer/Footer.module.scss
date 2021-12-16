@@ -18,8 +18,12 @@
         font-weight: bold;
         transform: translateY(40px);
         opacity: 0;
-        
         display: block;
+        transition: .2s;
+
+        &:hover {
+          color: var(--tertiary-color);
+        }
       }
     }
 
