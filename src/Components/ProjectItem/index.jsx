@@ -14,7 +14,6 @@ const ProjectItem = ({ name, text, src, alt, techSrc }) => {
 
   React.useEffect(() => {
 
-
     const animaProject = () => {
       gsap.to(titleAbout.current, {
         x: 0,
