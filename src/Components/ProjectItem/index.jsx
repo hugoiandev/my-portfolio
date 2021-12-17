@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './ProjectItem.module.scss'
 import { gsap } from 'gsap'
 
-const ProjectItem = ({ name, text, src, alt, techSrc }) => {
+const ProjectItem = ({ title, text, src, alt, techSrc, url}, key) => {
   const titleAbout = React.useRef()
   const textAbout = React.useRef()
   const titleTech = React.useRef()
@@ -57,23 +57,26 @@ const ProjectItem = ({ name, text, src, alt, techSrc }) => {
   }, [])
 
   return (
-    <div className={styles.containerItem}>
+    <div key={key} className={styles.containerItem}>
       <div ref={project} className={styles.about}>
-        <h2 ref={titleAbout}>{name}</h2>
+        <h2 ref={titleAbout}>{title}</h2>
         <p ref={textAbout}>{text}</p>
         <div className={styles.tech}>
           <span ref={titleTech}>Tecnologias</span>
           <div ref={techImgs} className={styles.techSource}>
-            {techSrc.map((src, index) => {
+            {techSrc && techSrc.map((item, index) => {
+              console.log(item.imgs)
               return (
-                <img key={index} src={src} alt={index} />
+                <img key={index} src={item.img.url} alt={item.img.alt} />
               )
             })}
           </div>
         </div>
+        <a className={styles.link} target='_blank' rel='noreferrer' href={url}>
         <button ref={button} className={styles.button}>
           Ver projeto
         </button>
+        </a>
       </div>
       <div className={styles.imgItem}>
         <img ref={imgProject} src={src} alt={alt} />
