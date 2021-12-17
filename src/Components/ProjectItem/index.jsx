@@ -73,9 +73,9 @@ const ProjectItem = ({ title, text, src, alt, techSrc, url}, key) => {
           </div>
         </div>
         <a className={styles.link} target='_blank' rel='noreferrer' href={url}>
-        <button ref={button} className={styles.button}>
-          Ver projeto
-        </button>
+          <button ref={button} className={styles.button}>
+            Ver projeto
+          </button>
         </a>
       </div>
       <div className={styles.imgItem}>
