@@ -43,15 +43,18 @@
       }
     }
 
-    .button {
-      margin-top: 50px;
-      font-size: 1rem;
-      color: var(--secundary-color);
-      background: var(--primary-color);
-      border: none;
-      padding: 10px 50px;
-      transform: translateX(-100%);
-      cursor: pointer;
+    .link {
+      text-decoration: none;
+      .button {
+        margin-top: 50px;
+        font-size: 1rem;
+        color: var(--secundary-color);
+        background: var(--primary-color);
+        border: none;
+        padding: 10px 50px;
+        transform: translateX(-100%);
+        cursor: pointer;
+      }
     }
   }
 
