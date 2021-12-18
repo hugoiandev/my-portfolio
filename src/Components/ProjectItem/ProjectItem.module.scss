@@ -85,8 +85,9 @@
 
   .containerImg {
     overflow: hidden;
+    width: 600px;
     .imgItem {
-      width: 600px;
+      width: 100%;
       transform: translateX(100%);
       overflow: hidden;
       img {
