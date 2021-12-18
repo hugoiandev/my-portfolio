@@ -3,6 +3,10 @@
   padding: 0 40px;
   background: var(--primary-color);
 
+  @media(max-width: 600px) {
+    padding: 0 20px;
+  }
+
   .footerContent {
     padding-top: 300px;
     padding-bottom: 30px;
@@ -22,6 +26,18 @@
 
         &:hover {
           color: var(--tertiary-color);
+        }
+
+        @media(max-width: 860px) {
+          font-size: 2rem;
+        }
+
+        @media(max-width: 600px) {
+          font-size: 1.2rem;
+        }
+
+        @media(max-width: 380px) {
+          font-size: 1rem;
         }
       }
     }
