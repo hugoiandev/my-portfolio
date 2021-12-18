@@ -65,7 +65,6 @@ const ProjectItem = ({ title, text, src, alt, techSrc, url}, key) => {
           <span ref={titleTech}>Tecnologias</span>
           <div ref={techImgs} className={styles.techSource}>
             {techSrc && techSrc.map((item, index) => {
-              console.log(item.imgs)
               return (
                 <img key={index} src={item.img.url} alt={item.img.alt} />
               )
@@ -74,12 +73,15 @@ const ProjectItem = ({ title, text, src, alt, techSrc, url}, key) => {
         </div>
         <a className={styles.link} target='_blank' rel='noreferrer' href={url}>
           <button ref={button} className={styles.button}>
-            Ver projeto
+            <span>Ver projeto</span>
+            <span>Ver</span>
           </button>
         </a>
       </div>
-      <div className={styles.imgItem}>
-        <img ref={imgProject} src={src} alt={alt} />
+      <div className={styles.containerImg}>
+        <div ref={imgProject} className={styles.imgItem}>
+          <img src={src} alt={alt} />
+        </div>
       </div>
     </div>
   )
