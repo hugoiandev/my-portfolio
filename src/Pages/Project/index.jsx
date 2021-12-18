@@ -16,7 +16,6 @@ const Project = () => {
       const { url } = GET_PROJECTS()
       const response = await fetch(url)
       const json = await response.json()
-      console.log(json)
 
       setProjects(json)
     }

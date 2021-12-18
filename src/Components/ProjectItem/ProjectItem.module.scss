@@ -46,28 +46,57 @@
     .link {
       text-decoration: none;
       .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 50px;
         font-size: 1rem;
         color: var(--secundary-color);
         background: var(--primary-color);
         border: none;
-        padding: 10px 50px;
+        height: 40px;
+        padding: 0 80px;
         transform: translateX(-100%);
+        overflow: hidden;
         cursor: pointer;
+
+        span {
+          position: absolute;
+          transition: 0.3s;
+
+          &:nth-child(2) {
+            transform: translateX(200px);
+          }
+        }
+
+        &:hover {
+          span {
+            &:nth-child(1) {
+              transform: translateX(-200px);
+            }
+            &:nth-child(2) {
+              transform: translateX(0);
+            }
+          }
+        }
       }
     }
   }
 
-  .imgItem {
+  .containerImg {
     overflow: hidden;
-    width: 600px;
-    img {
-      width: 100%;
-      max-height: 500px;
+    .imgItem {
+      width: 600px;
       transform: translateX(100%);
-
-      &:hover {
-        transform: scale(1.1);
+      overflow: hidden;
+      img {
+        width: 100%;
+        max-height: 500px;
+        transition: 0.3s;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
