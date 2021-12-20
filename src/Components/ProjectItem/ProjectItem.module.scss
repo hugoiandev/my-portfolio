@@ -2,6 +2,10 @@
 .containerItem {
   display: flex;
 
+  @media(max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+
   .about {
     margin-right: 30px;
     overflow: hidden;
@@ -10,6 +14,10 @@
       color: var(--primary-color);
       font-weight: bold;
       transform: translateX(-100%);
+
+      @media(max-width: 866px) {
+        font-size: 1.8rem;
+      }
     }
     p {
       margin-top: 30px;
@@ -18,6 +26,10 @@
       color: #383838;
       line-height: 25px;
       transform: translateX(-100%);
+
+      @media(max-width: 866px) {
+        font-size: 1rem;
+      }
     }
 
     .tech {
@@ -30,6 +42,10 @@
         font-weight: bold;
         display: block;
         transform: translateX(-100%);
+
+        @media(max-width: 866px) {
+          font-size: 1.5rem;
+        }
       }
 
       .techSource {
@@ -85,7 +101,11 @@
 
   .containerImg {
     overflow: hidden;
-    width: 600px;
+    max-width: 600px;
+
+    @media(max-width: 600px) {
+      margin-bottom: 30px;
+    }
     .imgItem {
       width: 100%;
       transform: translateX(100%);
