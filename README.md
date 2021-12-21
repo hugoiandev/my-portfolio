@@ -1,5 +1,6 @@
-# Em desenvolvimento
+# Portfólio
+Este é meu portfólio, feito em ReactJS.
 
 ## Hospedagem
 
-Este portfolio está em desenvolvimento [Clique aqui](https://my-portfolio-ruby-seven.vercel.app/) para ver.
+Ele se encontra hospedado na plataforma vercel [Clique aqui](https://my-portfolio-18twurgcx-hugoiandev.vercel.app/) para ver.
