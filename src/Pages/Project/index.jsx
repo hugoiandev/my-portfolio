@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../../Components/Container'
-import Preload from '../../Components/Preload'
+import Load from '../../Components/Load'
 import ProjectItem from '../../Components/ProjectItem'
 import Title from '../../Components/Title'
 import styles from './Project.module.scss'
@@ -45,7 +45,7 @@ const Project = () => {
           </div>
         </section>
       </Container>
-      <Preload text='Projetos' />
+      <Load text='Projetos' />
     </>
   )
 }

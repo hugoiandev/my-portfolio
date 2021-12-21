@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../../Components/Container'
-import Preload from '../../Components/Preload'
+import Load from '../../Components/Load'
 import Title from '../../Components/Title'
 import styles from './About.module.scss'
 import { gsap } from 'gsap'
@@ -45,7 +45,7 @@ const About = () => {
           </div>
         </section>
       </Container>
-      <Preload text='Sobre' />
+      <Load text='Sobre' />
     </>
   )
 }

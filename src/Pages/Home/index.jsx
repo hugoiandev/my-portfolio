@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../../Components/Button'
 import Technologies from '../../Components/Technologies'
-import Preload from '../../Components/Preload'
+import Load from '../../Components/Load'
 import IntroText from '../../Components/IntroText'
 import styles from './Home.module.scss'
 import { gsap } from 'gsap'
@@ -52,7 +52,7 @@ const Home = () => {
         <Button link='/projects' textOne='Projetos' textTwo='Ir' />
       </section>
       <Technologies />
-      <Preload text='Hello' />
+      <Load text='Hello' />
     </>
   )
 }
