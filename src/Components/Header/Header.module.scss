@@ -105,8 +105,8 @@
 
     .menuContent {
       background: var(--primary-color);
-      max-width: 100%;
-      position: fixed;
+      width: 100%;
+      position: absolute;
       height: 100vh;
       right: 0;
       left: 0;
