@@ -2,13 +2,13 @@ import React from 'react'
 import styles from './Preload.module.scss'
 import { gsap, Power4 } from 'gsap'
 
-const Preload = ({ text }) => {
-  const preload = React.useRef()
-  const preloadText = React.useRef()
+const Load = ({ text }) => {
+  const load = React.useRef()
+  const loadText = React.useRef()
 
   React.useEffect(() => {
     const animaOverload = () => {
-      gsap.to(preload.current, {
+      gsap.to(load.current, {
         height: '0vh',
         duration: 1,
         delay: 0.8,
@@ -16,7 +16,7 @@ const Preload = ({ text }) => {
         display: 'none'
       })
 
-      gsap.to(preloadText.current, {
+      gsap.to(loadText.current, {
         y: -50,
         duration: 0.5,
         delay: 0.5,
@@ -30,12 +30,12 @@ const Preload = ({ text }) => {
   }, [])
 
   return (
-    <div ref={preload} className={styles.preload}>
+    <div ref={load} className={styles.preload}>
       <div className={styles.preloadContent}>
-        <span ref={preloadText}>{text}</span>
+        <span ref={loadText}>{text}</span>
       </div>
     </div>
   )
 }
 
-export default Preload
+export default Load

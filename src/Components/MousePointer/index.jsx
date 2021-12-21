@@ -6,18 +6,24 @@ const MousePointer = () => {
   const refPointer = React.useRef()
 
   React.useEffect(() => {
-    window.addEventListener('mousemove', (event) => {
-      const clientY = event.clientY - 20
-      const clientX = event.clientX - 20
+    const initMousePointer = () => {
+      window.addEventListener('mousemove', (event) => {
+        const clientY = event.clientY - 20
+        const clientX = event.clientX - 20
 
-      gsap.to(refPointer.current, {
-        y: clientY,
-        x: clientX,
-        duration: 0.3,
-        ease: 'cubic-bezier(.23,1,.32,1)'
+        gsap.to(refPointer.current, {
+          y: clientY,
+          x: clientX,
+          duration: 0.3,
+          ease: 'cubic-bezier(.23,1,.32,1)'
+        })
       })
-      
-    })
+    }
+
+    if (window.innerWidth > 800) {
+      initMousePointer()
+    }
+
   }, [])
 
   return (

@@ -10,6 +10,11 @@
       margin-left: 80px;
       font-weight: bold;
       transform: translateY(100%);
+
+      @media(max-width: 600px) {
+        font-size: 0.8rem;
+        margin-left: 50px;
+      }
     }
   }
 
@@ -19,6 +24,10 @@
       color: var(--primary-color);
       transform: translateY(60px);
       opacity: 0;
+
+      @media(max-width: 600px) {
+        font-size: 3.8rem;
+      }
     }
   }
 }

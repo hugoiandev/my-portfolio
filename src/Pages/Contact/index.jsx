@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../../Components/Container'
-import Preload from '../../Components/Preload'
+import Load from '../../Components/Load'
 import Title from '../../Components/Title'
 import styles from './Contact.module.scss'
 import { gsap } from 'gsap'
@@ -61,7 +61,7 @@ const Contact = () => {
           </div>
         </section>
       </Container>
-      <Preload text='Contato' />
+      <Load text='Contato' />
     </>
   )
 }
