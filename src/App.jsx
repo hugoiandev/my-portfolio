@@ -5,15 +5,18 @@ import Routes from './routes'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import MousePointer from './Components/MousePointer'
+import Wrapper from './Components/Wrapper'
 
 const App = () => {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <Routes />
-        <Footer />
-        <MousePointer />
+        <Wrapper>
+          <Header />
+          <Routes />
+          <Footer />
+          <MousePointer />
+        </Wrapper>
       </Router>
     </div>
   )
