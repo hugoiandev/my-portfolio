@@ -11,6 +11,10 @@
     padding-top: 300px;
     padding-bottom: 30px;
 
+    @media(max-width: 800px) {
+      padding-top: 150px;
+    }
+
     .email {
       overflow: hidden;
       text-align: center;
