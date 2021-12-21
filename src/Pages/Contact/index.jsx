@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Container from '../../Components/Container'
 import Load from '../../Components/Load'
 import Title from '../../Components/Title'
@@ -31,6 +32,9 @@ const Contact = () => {
     <>
       <Container>
         <section className={styles.contact}>
+          <Helmet>
+            <title>Contato</title>
+          </Helmet>
           <Title text='Contato' subTitle='Entre em contato' />
           <div className={styles.containerContact}>
             <div className={styles.email}>

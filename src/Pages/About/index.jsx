@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Container from '../../Components/Container'
 import Load from '../../Components/Load'
 import Title from '../../Components/Title'
@@ -34,6 +35,9 @@ const About = () => {
     <>
       <Container>
         <section className={styles.about}>
+          <Helmet>
+            <title>Sobre</title>
+          </Helmet>
           <Title text='Sobre' subTitle='Conheça mais sobre mim' />
           <div className={styles.aboutContainer}>
             <article ref={refText} className={styles.textAbout}>

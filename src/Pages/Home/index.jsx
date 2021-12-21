@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Button from '../../Components/Button'
 import Technologies from '../../Components/Technologies'
 import Load from '../../Components/Load'
@@ -42,6 +43,9 @@ const Home = () => {
   return (
     <>
       <section className={styles.home}>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
         <div className={styles.containerTitle}>
           <h1 className={styles.title}>
             <IntroText text={['Olá', 'Hello', 'Hola', '你好']} delay={0} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Container from '../../Components/Container'
 import Load from '../../Components/Load'
 import ProjectItem from '../../Components/ProjectItem'
@@ -27,6 +28,9 @@ const Project = () => {
     <>
       <Container>
         <section className={styles.projects}>
+          <Helmet>
+            <title>Projetos</title>
+          </Helmet>
           <Title text='Projetos' subTitle='Conheça meus projetos' />
           <div className={styles.item}>
             {projects.results && projects.results.map((item) => {

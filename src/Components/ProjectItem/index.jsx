@@ -43,7 +43,7 @@ const ProjectItem = ({ title, text, src, alt, techSrc, url}, key) => {
       gsap.to(imgProject.current, {
         x: 0,
         duration: 0.5,
-        delay: 1.2
+        delay: 1.5
       })
     }
     

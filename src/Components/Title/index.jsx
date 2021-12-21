@@ -8,13 +8,13 @@ const Title = ({ text, subTitle }) => {
 
   React.useEffect(() => {
     const animaTitle = () => {
-      gsap.to(title.current, {
+      gsap.to(sub.current, {
         y: 0,
         duration: 1,
         delay: 1.5,
         opacity: 1
       })
-      gsap.to(sub.current, {
+      gsap.to(title.current, {
         y: 0,
         duration: 1,
         delay: 1.5,
