@@ -17,6 +17,14 @@
       display: block;
       font-size: 8rem;
       color: var(--secundary-color);
+
+      @media(max-width: 1000px) {
+        font-size: 6rem;
+      }
+
+      @media(max-width: 800px) {
+        font-size: 4rem;
+      }
     }
   }
 }

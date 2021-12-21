@@ -1,28 +1,11 @@
 import React from 'react'
 import styles from './Technologies.module.scss'
-import { gsap } from 'gsap'
 
 const Technologies = () => {
   const techContent = React.useRef()
   const [srcs, setSrcs] = React.useState([])
 
   React.useEffect(() => {
-    const animeTech = () => {
-      const width = techContent.current.offsetWidth
-
-      // Gsap animation
-      gsap.fromTo(techContent.current, {
-        x: '100vw',
-        duration: 10,
-        ease: 'linear',
-        repeat: -1
-      }, {
-        x: -width,
-        duration: 10,
-        ease: 'linear',
-        repeat: -1
-      })
-    }
 
     setSrcs([
       {
@@ -46,8 +29,6 @@ const Technologies = () => {
         alt: 'Icone Git'
       }
     ])
-
-    animeTech()
   }, [])
 
   return (
