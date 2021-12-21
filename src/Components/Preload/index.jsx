@@ -25,7 +25,7 @@ const Preload = ({ text }) => {
       })
     }
 
-    //animaOverload()
+    animaOverload()
 
   }, [])
 
