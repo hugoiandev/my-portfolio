@@ -1,20 +1,43 @@
 import React from 'react'
 import styles from './ProjectItem.module.scss'
 import { gsap } from 'gsap'
+import {
+  ButtonElement,
+  DivElement,
+  HeadingElement,
+  ParagraphElement,
+  SpanElement
+} from '../../Utils/types'
 
-const ProjectItem = ({ title, text, src, alt, techSrc, url}, key) => {
-  const titleAbout = React.useRef()
-  const textAbout = React.useRef()
-  const titleTech = React.useRef()
-  const techImgs = React.useRef()
-  const button = React.useRef()
-  const imgProject = React.useRef()
+interface ProjectItemProps {
+  title: string
+  text: string
+  src: string
+  alt: string
+  techSrc: []
+  url: string
+}
 
-  const project = React.useRef()
+interface TechSrc {
+  img: {
+    url: string
+    alt: string
+  }
+}
+
+const ProjectItem = ({ title, text, src, alt, techSrc, url}: ProjectItemProps, key: string): JSX.Element => {
+  const project = React.useRef<DivElement>(null)
+
+  const titleAbout = React.useRef<HeadingElement>(null)
+  const textAbout = React.useRef<ParagraphElement>(null)
+  const titleTech = React.useRef<SpanElement>(null)
+  const techImgs = React.useRef<DivElement>(null)
+  const button = React.useRef<ButtonElement>(null)
+  const imgProject = React.useRef<DivElement>(null)
 
   React.useEffect(() => {
 
-    const animaProject = () => {
+    const animaProject = (): void => {
       gsap.to(titleAbout.current, {
         x: 0,
         duration: 0.5,
@@ -53,7 +76,9 @@ const ProjectItem = ({ title, text, src, alt, techSrc, url}, key) => {
       }
     })
 
-    observer.observe(project.current)
+    if (project.current) {
+      observer.observe(project.current)
+    }
   }, [])
 
   return (
@@ -64,9 +89,9 @@ const ProjectItem = ({ title, text, src, alt, techSrc, url}, key) => {
         <div className={styles.tech}>
           <span ref={titleTech}>Tecnologias</span>
           <div ref={techImgs} className={styles.techSource}>
-            {techSrc && techSrc.map((item, index) => {
+            {techSrc && techSrc.map((item: TechSrc, index: number): JSX.Element => {
               return (
-                <img key={index} src={item.img.url} alt={item.img.alt} />
+                <img key={`${item.img.alt}-${index}`} src={item.img.url} alt={item.img.alt} />
               )
             })}
           </div>

@@ -1,13 +1,19 @@
 import React from 'react'
 import styles from './Title.module.scss'
 import { gsap } from 'gsap'
+import { HeadingElement, SpanElement } from '../../Utils/types'
 
-const Title = ({ text, subTitle }) => {
-  const title = React.useRef()
-  const sub = React.useRef()
+interface TitleProps {
+  text: string
+  subTitle: string
+}
+
+const Title = ({ text, subTitle }: TitleProps): JSX.Element => {
+  const title = React.useRef<HeadingElement>(null)
+  const sub = React.useRef<SpanElement>(null)
 
   React.useEffect(() => {
-    const animaTitle = () => {
+    const animaTitle = (): void => {
       gsap.to(sub.current, {
         y: 0,
         duration: 1,

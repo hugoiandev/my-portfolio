@@ -2,20 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 import { gsap } from 'gsap'
+import { DivElement, LiElement } from '../../Utils/types'
+
 
 const Header = () => {
   // State menu mobile
-  const [menuMobile, setmenuMobile] = React.useState(false)
+  const [menuMobile, setmenuMobile] = React.useState<boolean>(false)
   // Ref menu content
-  const menuContent = React.useRef()
+  const menuContent = React.useRef<DivElement>(null)
   // Ref menu list
-  const menuList = React.useRef()
+  const menuList = React.useRef<DivElement>(null)
 
   // Refs of menu links
-  const linkHome = React.useRef()
-  const linkProject = React.useRef()
-  const linkAbout = React.useRef()
-  const linkContact = React.useRef()
+  const linkHome = React.useRef<LiElement>(null)
+  const linkProject = React.useRef<LiElement>(null)
+  const linkAbout = React.useRef<LiElement>(null)
+  const linkContact = React.useRef<LiElement>(null)
 
   // Gsap animation
   React.useEffect(() => {

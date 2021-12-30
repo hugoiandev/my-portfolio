@@ -7,18 +7,37 @@ import Title from '../../Components/Title'
 import styles from './Project.module.scss'
 import { GET_PROJECTS } from '../../Utils/endpoint'
 
+interface ProjectTypes {
+  id: string
+  data: {
+    title: [{
+      text: string
+    }]
+    description: [{
+      text: string
+    }]
+    project_url: {
+      url: string
+    }
+    project_img: {
+      alt: string
+      url: string
+    }
+    tech_imgs: []
+  }
+}
 
-const Project = () => {
-  const [projects, setProjects] = React.useState([])
+const Project = (): JSX.Element => {
+  const [projects, setProjects] = React.useState<ProjectTypes[]>([])
 
   React.useEffect(() => {
 
-    const fetchProjects = async () => {
+    const fetchProjects = async (): Promise<void> => {
       const { url } = GET_PROJECTS()
       const response = await fetch(url)
       const json = await response.json()
 
-      setProjects(json)
+      setProjects(json.results)
     }
     fetchProjects()
 
@@ -33,7 +52,7 @@ const Project = () => {
           </Helmet>
           <Title text='Projetos' subTitle='Conheça meus projetos' />
           <div className={styles.item}>
-            {projects.results && projects.results.map((item) => {
+            {projects && projects.map((item) => {
               return (
                 <ProjectItem
                   key={item.id}

@@ -5,13 +5,14 @@ import Load from '../../Components/Load'
 import Title from '../../Components/Title'
 import styles from './Contact.module.scss'
 import { gsap } from 'gsap'
+import { DivElement, LinkElement } from '../../Utils/types'
 
-const Contact = () => {
-  const refEmail = React.useRef()
-  const refIcons = React.useRef()
+const Contact = (): JSX.Element => {
+  const refEmail = React.useRef<LinkElement>(null)
+  const refIcons = React.useRef<DivElement>(null)
 
   React.useEffect(() => {
-    const animaContact = () => {
+    const animaContact = (): void => {
       gsap.to(refEmail.current, {
         x: 0,
         duration: 0.5,

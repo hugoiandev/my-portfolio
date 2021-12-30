@@ -1,9 +1,15 @@
 import React from 'react'
 import styles from './IntroText.module.scss'
 import { gsap } from 'gsap'
+import { DivElement } from '../../Utils/types'
 
-const IntroText = ({ text, delay }) => {
-  const refCube = React.useRef()
+interface IntroTextProps {
+  text: string[]
+  delay: number
+}
+
+const IntroText = ({ text, delay }: IntroTextProps): JSX.Element => {
+  const refCube = React.useRef<DivElement>(null)
   const [rotateText, setRotateText] = React.useState(0)
 
   React.useEffect(() => {
@@ -13,7 +19,7 @@ const IntroText = ({ text, delay }) => {
       delay: delay
     })
     
-    const timer = setInterval(() => {
+    const timer = setInterval((): void => {
       setRotateText(rotateText - 90)
       return clearInterval(timer)
   
@@ -26,11 +32,11 @@ const IntroText = ({ text, delay }) => {
 
   return (
     <div ref={refCube} className={styles.containerCube}>
-      {text && text.map((item, index) => {
+      {text && text.map((item: string, index: number): JSX.Element => {
         return (
           <span
             className={styles.text}
-            key={index}
+            key={`${item}-${index}`}
           >
             {item}
           </span>

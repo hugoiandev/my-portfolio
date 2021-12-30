@@ -1,9 +1,13 @@
 import React from 'react'
 import styles from './Technologies.module.scss'
+import { DivElement } from '../../Utils/types'
 
-const Technologies = () => {
-  const techContent = React.useRef()
-  const [srcs, setSrcs] = React.useState([])
+type Srcs = { src: string, alt: string }
+
+
+const Technologies = (): JSX.Element => {
+  const techContent = React.useRef<DivElement>(null)
+  const [srcs, setSrcs] = React.useState<Srcs[]>([])
 
   React.useEffect(() => {
 
@@ -33,10 +37,10 @@ const Technologies = () => {
 
   return (
     <div ref={techContent} className={styles.technologies}>
-      {srcs && srcs.map((item, index) => {
+      {srcs && srcs.map((item: { src: string, alt: string }, index): JSX.Element => {
         return (
           <img
-            key={index}
+            key={`${item.alt}-${index}`}
             src={item.src}
             alt={item.alt}
           />
