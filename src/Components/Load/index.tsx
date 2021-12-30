@@ -1,13 +1,18 @@
 import React from 'react'
 import styles from './Preload.module.scss'
 import { gsap, Power4 } from 'gsap'
+import { DivElement, SpanElement } from '../../Utils/types'
 
-const Load = ({ text }) => {
-  const load = React.useRef()
-  const loadText = React.useRef()
+interface LoadProps {
+  text: string
+}
+
+const Load = ({ text }: LoadProps): JSX.Element => {
+  const load = React.useRef<DivElement>(null)
+  const loadText = React.useRef<SpanElement>(null)
 
   React.useEffect(() => {
-    const animaOverload = () => {
+    const animaOverload = (): void => {
       gsap.to(load.current, {
         height: '0vh',
         duration: 1,

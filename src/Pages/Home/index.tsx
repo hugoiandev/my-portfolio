@@ -5,40 +5,8 @@ import Technologies from '../../Components/Technologies'
 import Load from '../../Components/Load'
 import IntroText from '../../Components/IntroText'
 import styles from './Home.module.scss'
-import { gsap } from 'gsap'
 
-const Home = () => {
-  const titleOne = React.useRef()
-  const titleTwo = React.useRef()
-  const titleThree = React.useRef()
-  
-  React.useEffect(() => {
-    // Gsap animation
-    const animeTitle = () => {
-      gsap.to(titleOne.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        delay: 1.5
-      })
-      gsap.to(titleTwo.current, {
-        opacity: 1,
-        delay: 1.7,
-        y: 0,
-        duration: 0.7
-      })
-      gsap.to(titleThree.current, {
-        opacity: 1,
-        delay: 1.9,
-        y: 0,
-        duration: 0.7
-      })
-    }
-
-    animeTitle()
-    
-  },[])
-
+const Home = (): JSX.Element => {
 
   return (
     <>

@@ -1,15 +1,16 @@
 import React from 'react'
 import styles from './MousePointer.module.scss'
 import { gsap } from 'gsap'
+import { DivElement } from '../../Utils/types'
 
-const MousePointer = () => {
-  const refPointer = React.useRef()
+const MousePointer = (): JSX.Element => {
+  const refPointer = React.useRef<DivElement>(null)
 
   React.useEffect(() => {
-    const initMousePointer = () => {
-      window.addEventListener('mousemove', (event) => {
-        const clientY = event.clientY - 20
-        const clientX = event.clientX - 20
+    const initMousePointer = (): void => {
+      window.addEventListener('mousemove', (event: MouseEvent) => {
+        const clientY: number = event.clientY - 20
+        const clientX: number = event.clientX - 20
 
         gsap.to(refPointer.current, {
           y: clientY,

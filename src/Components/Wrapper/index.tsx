@@ -1,7 +1,11 @@
 import React from 'react'
 import styles from './Wrapper.module.scss'
 
-const Wrapper = ({ children }) => {
+interface WrapperProps {
+  children: React.ReactNode
+}
+
+const Wrapper = ({ children }: WrapperProps): JSX.Element => {
   return (
     <div className={styles.wrapper}>
       {children}

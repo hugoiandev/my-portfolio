@@ -5,13 +5,14 @@ import Load from '../../Components/Load'
 import Title from '../../Components/Title'
 import styles from './About.module.scss'
 import { gsap } from 'gsap'
+import { ArticleElement, DivElement } from '../../Utils/types'
 
-const About = () => {
-  const refText = React.useRef()
-  const refPhoto = React.useRef()
+const About = (): JSX.Element => {
+  const refText = React.useRef<ArticleElement>(null)
+  const refPhoto = React.useRef<DivElement>(null)
 
   React.useEffect(() => {
-    const animaAbout = () => {
+    const animaAbout = (): void => {
       gsap.to(refText.current, {
         y: 0,
         duration: 0.8,
