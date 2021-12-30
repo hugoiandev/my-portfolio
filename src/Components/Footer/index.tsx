@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './Footer.module.scss'
 import { gsap } from 'gsap'
+import { LinkElement } from '../../Utils/types'
 
-const Footer = () => {
-  const refEmail = React.useRef()
+const Footer = (): JSX.Element => {
+  const refEmail = React.useRef<LinkElement>(null)
 
   React.useEffect(() => {
     const mutationObserver = new IntersectionObserver((entries) => {
@@ -18,9 +19,10 @@ const Footer = () => {
       }
     })
   
-    mutationObserver.observe(refEmail.current)
+    if (refEmail.current) {
+      mutationObserver.observe(refEmail.current)
+    }
   }, [])
-
 
   return (
     <footer className={styles.footer}>
