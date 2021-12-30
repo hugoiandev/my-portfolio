@@ -5,7 +5,7 @@ import Projects from './Pages/Project'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 
-const Routes = () => {
+const Routes = (): JSX.Element => {
   return (
     <Switch>
       <Route exact path='/' component={Home} />

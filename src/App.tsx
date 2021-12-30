@@ -7,7 +7,7 @@ import Footer from './Components/Footer'
 import MousePointer from './Components/MousePointer'
 import Wrapper from './Components/Wrapper'
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <Router>
